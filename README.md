@@ -1,5 +1,7 @@
 # Adhivasindo Task Management Board (Vue 3 + SASS)
 
+🌐 **Live Demo**: [https://wafikhn.github.io/adhivasindo/](https://wafikhn.github.io/adhivasindo/)
+
 A modern, responsive, and pixel-perfect **Task Management Kanban Board** application built for the **Adhivasindo Frontend Technical Test**. 
 
 Built with **Vue 3**, **TypeScript**, **Vite**, **Pinia**, and **Modular SASS (SCSS)** with LocalStorage data persistence.
@@ -7,6 +9,8 @@ Built with **Vue 3**, **TypeScript**, **Vite**, **Pinia**, and **Modular SASS (S
 ---
 
 ## 🚀 Live Demo & Features
+
+🌐 **Live Website**: [https://wafikhn.github.io/adhivasindo/](https://wafikhn.github.io/adhivasindo/)
 
 ### 📋 Key Features
 
