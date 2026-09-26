@@ -1,0 +1,182 @@
+@use 'variables' as *;
+
+.kanban-column {
+  background: $bg-column;
+  border-radius: 14px;
+  width: 290px;
+  min-width: 290px;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  padding: 12px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+
+  &.drag-over {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+  }
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 2px 4px;
+}
+
+.column-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.column-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.column-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.add-inline-btn {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 4px;
+  transition: all 0.15s;
+
+  &:hover {
+    background: #e2e8f0;
+    color: $text-primary;
+  }
+}
+
+.header-right-actions {
+  position: relative;
+}
+
+.column-menu-btn {
+  color: $text-muted;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+// Column Dropdown Menu
+.column-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 180px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: $shadow-lg;
+  border: 1px solid $border-color;
+  padding: 6px;
+  z-index: 50;
+}
+
+.menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: none;
+  background: transparent;
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: #334155;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+
+  &:hover {
+    background: #f1f5f9;
+    color: $text-primary;
+  }
+
+  &.danger {
+    color: #ef4444;
+
+    &:hover {
+      background: #fee2e2;
+    }
+  }
+}
+
+.rename-box {
+  margin-bottom: 10px;
+
+  input {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #3b82f6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    outline: none;
+    font-family: inherit;
+  }
+}
+
+// Column Cards List
+.column-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  padding-right: 2px;
+  flex: 1;
+  min-height: 120px;
+}
+
+// Quick Add Form
+.quick-add-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+  textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.875rem;
+    color: $text-primary;
+  }
+}
+
+.quick-add-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.empty-column-placeholder {
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-muted;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
